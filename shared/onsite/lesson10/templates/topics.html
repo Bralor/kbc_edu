@@ -7,8 +7,8 @@
     {# for loop pomocí Jinja2 je podobný Pythonu #}
         {% for clanek in clanky %}
             <tr>
-                <td>{{ clanek["Přidáno"] }}</td>
-                <td>{{ clanek["Typ"] }}</td>
+                <td style="width:120px">{{ clanek["Přidáno"] }}</td>
+                <td style="width:120px">{{ clanek["Typ"] }}</td>
                 <td>{{ clanek["Popisek"] }}</td>
                 <td>
                     <a href="{{ clanek['Odkaz'] }}" target="blank">Odkaz</a>
