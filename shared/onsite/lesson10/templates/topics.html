@@ -2,5 +2,20 @@
 {% block content %}
 
 <h1>Aktuální články</h1>
+<table>
+    <tbody>
+    {# for loop pomocí Jinja2 je podobný Pythonu #}
+        {% for clanek in clanky %}
+            <tr>
+                <td>{{ clanek["Přidáno"] }}</td>
+                <td>{{ clanek["Typ"] }}</td>
+                <td>{{ clanek["Popisek"] }}</td>
+                <td>
+                    <a href="{{ clanek['Odkaz'] }}" target="blank">Odkaz</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
 
 {% endblock %}
