@@ -1,0 +1,28 @@
+{% extends 'sablona.html' %}
+{% block content %}
+
+<h1>Článek {{ clanek["Id"] }}</h1>
+<table>
+    <tbody>
+        <tr>
+            <td>Přidáno dne:</td>
+            <td>{{ clanek["Přidáno"] }}</td>
+        </tr>   
+        <tr>
+            <td>Typ článku:</td>
+            <td>{{ clanek["Typ"] }}</td>
+        </tr>   
+        <tr>
+            <td>Text článku:</td>
+            <td>{{ clanek["Popisek"] }}</td>
+        </tr>   
+        <tr>
+            <td>Odkaz na článek:</td>
+            <td>
+                <a href="{{ clanek['Odkaz'] }}" target="blank">Odkaz</a>
+            </td>
+        </tr>   
+    </tbody>
+</table>
+
+{% endblock %}
