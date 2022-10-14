@@ -13,10 +13,11 @@ def root():
 @app.route("/clanky")
 def topics():
     topics = read_topics("clanky.csv")
+
     return render_template(
         "topics.html",
         jmeno_stranky="CLANKY",
-        clanky=topics
+        clanky=topics  # [{"Id": 1, ...}, {"Id": 2, ...}]
     )
 
 
