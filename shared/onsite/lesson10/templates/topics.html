@@ -9,9 +9,11 @@
             <tr>
                 <td style="width:120px">{{ clanek["Přidáno"] }}</td>
                 <td style="width:120px">{{ clanek["Typ"] }}</td>
-                <td>{{ clanek["Popisek"] }}</td>
-                <td>
-                    <a href="{{ clanek['Odkaz'] }}" target="blank">Odkaz</a>
+                <td style="width:120px">
+                    <a href="/clanky/{{ clanek['Id'] }}">Detail</a>
+                </td>
+                <td style="width:120px">
+                    <a href="{{ clanek['Odkaz'] }}" target="blank">Zdroj</a>
                 </td>
             </tr>
         {% endfor %}
